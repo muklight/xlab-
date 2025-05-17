@@ -1,0 +1,20 @@
+#include <Arduino.h>
+// 设置 LED 引脚
+
+int pin_list[6]={27,26,25,33,32,14};
+void setup() {
+    // 设定引脚为输出模式
+    for(int i=0;i<6;i++){
+        pinMode(pin_list[i], OUTPUT);
+    }
+    
+}
+
+void loop() {
+    
+    for(int i=0;i<6;i++){
+        digitalWrite(pin_list[i],HIGH);
+        delay(500);
+        digitalWrite(pin_list[i],LOW);
+    }
+}
